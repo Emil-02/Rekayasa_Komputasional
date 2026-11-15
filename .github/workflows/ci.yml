@@ -21,3 +21,5 @@ jobs:
           python -m pip install --upgrade pip ruff
       - name: Check for syntax errors and undefined names
         run: ruff check --select=E9,F63,F7,F82 --output-format=github .
+      - name: Smoke test (cari kata lalu keluar)
+        run: printf '1\n2\nrumah\n10\n' | python kamus_konjo.py
